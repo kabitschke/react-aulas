@@ -1,0 +1,20 @@
+.container{
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .header{
+    background-color:#888;
+  }
+  
+  .header-area{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+  
+  
+  .menu ul{
+    display: flex;
+    gap: 20px;
+  }
