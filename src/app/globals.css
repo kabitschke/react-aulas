@@ -20,7 +20,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, #4e8ef7, #6eb7ff);
+ 
 }
 
 .area{

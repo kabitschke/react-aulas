@@ -1,40 +1,42 @@
-import { peopleList } from '@/data/peopleList';
+import { students } from "@/data/students";
+
+
 const Page = () => {
 
-  const chemists = peopleList.filter(person => person.profession === 'chemist');
 
-  const zero = (number: number) => {
-    return number < 10 ? `0${number}` : number;
-  }
-
-
-  let horario = new Date();
-  let horas = zero(horario.getHours());
-  let minutos = zero(horario.getMinutes());
-
-  let saudacao = '';
-
-
-  if (horario.getHours() < 12) {
-    saudacao = 'Bom dia! 🌞';
-  } else if (horario.getHours() > 11 && horario.getHours() < 18) {
-    saudacao = 'Boa Tarde! ☀️';
-  } else {
-    saudacao = 'Boa Noite! 💤';
-  }
-
-  let fullHoras = `${horas} : ${minutos}`
 
 
   return (
-    <div className='area'>
+    <div className="w-screen h-screen flex justify-center  bg-black text-white">
+      <div>
+          <table className="table-fixed mt-4">
+            <thead className="bg-slate-900">
+              <tr className="text-left">
+                <th>Name</th>
+                <th>Status</th>
+                <th>Grade1</th>
+                <th>Grade2</th>
+                <th>Final Grade</th>
+              
 
-      <div className='area-horas'>
+              </tr>
+            </thead>
+            <tbody >
+                {students.map(student => (
+                  <tr key={student.id} className="bg-slate-400">
+                    <td>{student.name}
+                      <div>{student.email}</div>
+                    </td>
 
-        {fullHoras}
-
-        <p className='saudacao'>{saudacao}</p>
-
+                    <td>{student.active ? 'Active' : 'Inative'}</td>
+                    <td>{student.grade1}</td>
+                    <td>{student.grade2}</td>
+                    <td>{student.active ? (student.grade1 + student.grade1)/2 : '--'}</td>
+            
+                  </tr>
+                ))}
+            </tbody>
+          </table>
       </div>
 
     </div>
