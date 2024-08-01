@@ -4,21 +4,39 @@ import { useState } from "react";
 
 const Page = () => {
 
- const [count, setCount] = useState(false);
-  const handleCount = () => {
-    setCount(!count);
-    
+  type Todo = {
+    label: string;
+    checked: boolean;
   }
 
+  const [list, setList] = useState<Todo[]>([{label: 'Fazer dever de casa', checked: false}, {label: 'Fazer dever de casa', checked: true}]);
+
+
+
+
+
   return (
-    <div className="container mx-auto text-white flex justify-center items-center flex-col mt-4">
+    <div className="w-screen h-screen flex flex-col items-center text-2xl">
+      <h1 className="text-4xl mt-5">Lista de Tarefas</h1>
+
+      <div className="flex w-full max-w-lg my-3 p-4 rounded-md bg-gray-700 border-2 border-gray-500">
+
+        <input type="text"
+        placeholder="O que deseja fazer"
+        className="flex-1 boder border-black p-3 text-2xl text-black rounded-md mr-3" 
+        />
+
+      <button>Adicionar</button>
+      </div>
+
+      <ul>
+        {list.map(el => (
+        <li>{el.label}  - <button className="hover:underline">[ deletar ]</button></li>
+        
+      ))}
       
-      <button onClick={handleCount} className="bg-blue-500 p-2 rounded-md">{count ? "Ocultar" : "Mostrar Área"}</button>
-        {
-          count &&
-              <div className="bg-red-500 p-2 rounded-md text-white mt-2">Área Oculta</div>
-        }
-      
+      </ul>
+
 
     </div>
   );
