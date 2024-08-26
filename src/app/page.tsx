@@ -1,19 +1,17 @@
 "use client"
 
-import { GaleriaImg } from "@/components/GaleriaImg";
-import { galery } from "@/data/galery";
+import { QuizList } from "@/components/QuizList";
+import { quizList } from "@/data/quizList";
 
-const Page = () => {
-
-
+const page = () => {
   return (
+    <div className="w-screen h-screen bg-blue-500 flex justify-center items-center">
 
-    <div className="lg:container mx-auto">
-
-      <GaleriaImg list={galery}/>
+      <QuizList list={quizList} />
 
     </div>
-  )
+
+  );
 }
 
-export default Page;
+export default page;

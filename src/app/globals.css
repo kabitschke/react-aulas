@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "header.css";
+
 
 
 :root {
@@ -21,29 +21,5 @@
 body {
   color: rgb(var(--foreground-rgb));
   background-color: #333;
- 
+
 }
-
-.area{
-  max-width: 1200px;
-  height: 100vh;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.area-horas{
-  font-size:45px;
-  color: #FFF;
-  font-weight: 600;
-}
-
-.saudacao{
-  font-size: 20px;
-  text-align: center;
-}
-
-
-
-
