@@ -24,7 +24,7 @@ npm install @types/react @types/react-dom --save-dev
 
 npm install @types/react @types/react-dom --save-dev
 
-##Na pasta exercícios é necessário copiar o arquivo desejado e passar para pasta page renomeando para page.tsx
+## Na pasta exercícios é necessário copiar o arquivo desejado e passar para pasta page renomeando para page.tsx
 
 ### Formas de criar um projeto do zero 
 
