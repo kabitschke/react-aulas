@@ -17,6 +17,8 @@ git clone https://github.com/kabitschke/react-aulas.git
 cd react-aulas
 npm install
 npm install @types/react @types/react-dom --save-dev
+npm install @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons
+
 
 ```
 
